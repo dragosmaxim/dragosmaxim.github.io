@@ -118,7 +118,7 @@ A visitor can move between Home, About, Skills, Projects, and Contact sections o
 - **SC-005a**: A visitor who opens a direct project URL can reach the broader Projects section or portfolio navigation in no more than one action.
 - **SC-006**: The website remains readable and usable on common mobile, tablet, and desktop viewport sizes without horizontal scrolling.
 - **SC-007**: A keyboard-only visitor can reach and activate all navigation, project, repository, and contact links.
-- **SC-008**: At least 80% of the initial viewport and Projects section visual hierarchy supports project discovery or professional credibility, rather than decorative content.
+- **SC-008**: The portfolio objectively emphasizes engineering projects: the hero section contains a visible "View Projects" primary call to action; the Projects section is reachable directly from primary navigation; the Projects section appears before lower-priority sections such as Contact; project cards are visually more prominent than decorative elements; and a manual review confirms the page emphasizes engineering project evidence over decorative content.
 - **SC-009**: The MVP can be deployed as a static website without requiring user accounts, server-side processing, database setup, CMS configuration, or contact-form processing.
 
 ## Assumptions

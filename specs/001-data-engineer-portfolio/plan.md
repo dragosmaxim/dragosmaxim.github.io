@@ -12,7 +12,7 @@ Build a frontend-only professional Data Engineer portfolio MVP using React, stri
 
 **Language/Version**: TypeScript with strict typing, React application source, modern browser runtime
 
-**Primary Dependencies**: React, React DOM, React Router, Vite, Tailwind CSS, Lucide React
+**Primary Runtime and Build Dependencies**: React, React DOM, React Router, Vite, Tailwind CSS, Lucide React
 
 **Storage**: Static typed content modules and optimized static assets only; no database, backend, CMS, or client persistence
 
@@ -22,7 +22,7 @@ Build a frontend-only professional Data Engineer portfolio MVP using React, stri
 
 **Project Type**: Single frontend web application
 
-**Performance Goals**: Fast static portfolio load, minimal dependencies, optimized images/diagrams, no unnecessary runtime state or animation libraries
+**Performance Goals**: Production build must succeed; project screenshots and diagrams must be optimized before deployment; production bundle size must be reviewed during final validation; runtime dependencies must remain limited to necessary approved libraries; unused third-party libraries must be removed before completion.
 
 **Constraints**: Frontend-only MVP; no authentication, backend services, databases, CMS, blog, contact-form backend, Redux, Zustand, Axios, large UI frameworks, or unnecessary animation libraries; GitHub Pages-compatible routing and asset paths
 
@@ -36,7 +36,7 @@ Build a frontend-only professional Data Engineer portfolio MVP using React, stri
 - **II. Frontend Architecture and Data Boundaries**: PASS — MVP is frontend-only with centralized typed data. Presentation components receive typed props and do not know whether data is static or future API-backed.
 - **III. Professional UI, UX, and Accessibility**: PASS — Plan requires minimalist dark design, responsive layout, semantic HTML, keyboard-accessible navigation, visible focus states, and restrained CSS-only animation if any.
 - **IV. Validation and Completion Gates**: PASS — Plan includes build, TypeScript, routing, responsive, keyboard, link, missing-image, unavailable-repository, and regression validation.
-- **V. Performance and Dependency Discipline**: PASS — Dependencies are limited to the requested frontend stack and Lucide React. No large UI, state, request, or animation libraries.
+- **V. Performance and Dependency Discipline**: PASS — Runtime dependencies remain limited to the approved frontend stack and Lucide React. Development-only tooling is intentionally limited to Vitest, React Testing Library, jest-dom, user-event, and ESLint for validation and code quality; these tools are justified, minimal, and do not affect the production bundle. No large UI, state, request, or animation libraries.
 - **VI. Approved Technology and Deployment Constraints**: PASS — Uses React, TypeScript, Vite, Tailwind CSS, Lucide React, GitHub Actions, and GitHub Pages. React Router is added because direct project routes are a product requirement.
 - **VII. Centralized Content and Maintainability**: PASS — Profile, projects, and skills live in typed data modules; adding projects or skills does not require changing rendering components.
 - **VIII. Simplicity Before Generalization**: PASS — No backend, service layer, repository pattern, global state library, or speculative data-access abstraction. Future API compatibility is preserved by prop boundaries and typed data shapes.
@@ -279,10 +279,12 @@ Plan implementation and validation around:
 
 ## Performance Considerations
 
-- Keep dependencies to React, React DOM, React Router, Vite, Tailwind CSS, and Lucide React unless a later task documents a specific need.
+- Keep runtime dependencies to React, React DOM, React Router, and Lucide React unless a later task documents a specific need.
 - Avoid global state libraries and request libraries.
 - Avoid large UI frameworks and animation packages.
 - Optimize project screenshots and diagrams before deployment.
+- Review production bundle size during final validation and investigate unexpected large output before deployment.
+- Remove unused third-party libraries before completion.
 - Prefer static imports or Vite-supported assets for predictable production paths.
 - Keep state local and minimal to avoid unnecessary re-renders.
 
@@ -292,6 +294,10 @@ Validation must cover:
 
 - production build succeeds
 - TypeScript strict compilation reports no errors
+- project screenshots and diagrams are optimized before deployment
+- production bundle size is reviewed for unexpected large output
+- runtime dependencies are limited to necessary approved libraries
+- unused third-party libraries are absent from package.json
 - home route renders required sections
 - project route resolves each of the four launch projects
 - unknown project identifiers produce a graceful not-found state
@@ -366,17 +372,22 @@ Same React pages/components receiving typed data
 
 ## Dependencies and Justification
 
-| Dependency | Purpose | Justification |
-|------------|---------|---------------|
-| React | UI rendering | Approved stack for the portfolio frontend |
-| React DOM | Browser rendering | Required by React web applications |
-| TypeScript | Static typing | Constitution requires strict typing |
-| Vite | Build/dev tooling | Approved stack and simple static build output |
-| Tailwind CSS | Styling | Approved stack; supports responsive, accessible, dependency-light styling |
-| React Router | Home and direct project routes | Required for `/` and `/projects/:projectId` routing |
-| Lucide React | Minimal icons | Approved by constitution; use sparingly for navigation/contact/project affordances |
-| GitHub Actions | Deployment automation | Required for repeatable GitHub Pages deployment |
-| GitHub Pages | Static hosting | Required hosting target |
+| Dependency | Type | Purpose | Justification | Constitution dependency-discipline compliance |
+|------------|------|---------|---------------|---------------------------------------------|
+| React | Runtime | UI rendering | Approved stack for the portfolio frontend | Required baseline frontend library defined by the constitution; not an optional addition. |
+| React DOM | Runtime | Browser rendering | Required by React web applications | Minimal required runtime companion for React browser rendering. |
+| TypeScript | Development/build | Static typing | Constitution requires strict typing | Directly enforces strict typing and maintainability requirements without adding browser runtime behavior. |
+| Vite | Development/build | Build/dev tooling | Approved stack and simple static build output | Required approved tooling for a static, GitHub Pages-compatible build; keeps build complexity low. |
+| Tailwind CSS | Build/runtime CSS output | Styling | Approved stack; supports responsive, accessible, dependency-light styling | Approved styling approach that avoids a large UI component framework and compiles to static CSS. |
+| React Router | Runtime | Home and direct project routes | Required for `/` and `/projects/:projectId` routing | Narrow runtime dependency justified by the product requirement for clean direct project URLs. |
+| Lucide React | Runtime | Minimal icons | Approved by constitution; use sparingly for navigation/contact/project affordances | Approved lightweight icon dependency; usage is constrained to purposeful UI affordances. |
+| Vitest | Development/test | Unit and focused behavior test runner | Supports project data validation, route/page behavior tests, and component contract tests required by the plan and tasks | Development-only tooling that validates meaningful behavior without adding runtime weight or broad framework complexity. |
+| React Testing Library | Development/test | React component and page behavior testing | Enables tests that exercise user-visible rendering and interactions for project cards, detail pages, navigation, profile, skills, and contact sections | Development-only dependency aligned with the constitution requirement to test meaningful behavior rather than implementation details. |
+| @testing-library/jest-dom | Development/test | DOM-specific test assertions | Provides readable assertions for accessibility-relevant and user-visible DOM states in component tests | Development-only assertion helper that improves test clarity and maintainability without affecting production output. |
+| @testing-library/user-event | Development/test | User interaction simulation in tests | Enables realistic keyboard, pointer, navigation, and link interaction tests required for accessibility and behavior validation | Development-only helper used to validate accessible interaction patterns required by the constitution. |
+| ESLint | Development/quality | Static code quality checks for React and TypeScript | Supports maintainable code, catches common defects, and enforces consistency during implementation | Development-only quality gate that supports code discipline without introducing runtime code or architectural complexity. |
+| GitHub Actions | Deployment automation | Required for repeatable GitHub Pages deployment | Hosted CI/deployment mechanism; does not add application runtime dependencies. |
+| GitHub Pages | Static hosting | Required hosting target | Static hosting target required by the constitution and compatible with the frontend-only MVP. |
 
 Rejected dependencies: FastAPI, backend services, databases, authentication, CMS, Redux, Zustand, Axios, large UI frameworks, and animation libraries because they are outside MVP scope or unnecessary for static portfolio requirements.
 
@@ -386,7 +397,7 @@ Rejected dependencies: FastAPI, backend services, databases, authentication, CMS
 - **Frontend Architecture and Data Boundaries**: PASS — Static typed data is centralized and presentation components are prop-driven.
 - **Professional UI, UX, and Accessibility**: PASS — Design strategy and validation explicitly cover minimalist dark UI, responsiveness, keyboard access, focus states, semantic structure, and contrast.
 - **Validation and Completion Gates**: PASS — Build, TypeScript, routing, responsive, keyboard, and regression checks are planned.
-- **Performance and Dependency Discipline**: PASS — Dependency list is minimal and justified.
+- **Performance and Dependency Discipline**: PASS — Runtime dependencies remain limited to the approved frontend stack. Development-only validation and quality tooling is explicitly justified, minimal, and excluded from the production bundle.
 - **Approved Technology and Deployment Constraints**: PASS — Stack and deployment target match constitution; no backend is introduced.
 - **Centralized Content and Maintainability**: PASS — Content modules and domain types are explicit.
 - **Simplicity Before Generalization**: PASS — Future API compatibility is achieved through boundaries, not speculative architecture.

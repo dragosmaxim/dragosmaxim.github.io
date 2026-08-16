@@ -74,7 +74,7 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 - [ ] T023 [P] [US1] Add data validation tests for four required project categories, unique project IDs, repository rules, and required detail sections in src/data/projects.test.ts
 - [ ] T024 [P] [US1] Add project card rendering tests for title, description, technologies, detail link, and repository/unavailable state in src/components/projects/ProjectCard.test.tsx
 - [ ] T025 [P] [US1] Add project detail route tests for known projects and unknown project fallback in src/pages/ProjectDetails.test.tsx
-- [ ] T026 [P] [US1] Add home Projects section integration test confirming project prominence and four cards in src/pages/Home.projects.test.tsx
+- [ ] T026 [P] [US1] Add home Projects section integration test confirming the visible "View Projects" primary CTA, direct primary navigation link to Projects, Projects-before-Contact section order, and four project cards in src/pages/Home.projects.test.tsx
 
 ### Implementation for User Story 1
 
@@ -141,10 +141,10 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 
 - [ ] T047 [P] Add README documentation for purpose, portfolio overview, stack, architecture, setup, development, build, deployment, project structure, and content updates in README.md
 - [ ] T048 [P] Add environment and deployment notes for GitHub Pages base path and Router basename in .env.example
-- [ ] T049 Run TypeScript, lint, test, and production build validation and document results in specs/001-data-engineer-portfolio/validation.md
+- [ ] T049 Run TypeScript, lint, test, production bundle build validation, and production bundle size review, then document results in specs/001-data-engineer-portfolio/validation.md
 - [ ] T050 Perform quickstart route, project card, project detail, responsive, keyboard, and GitHub Pages fallback validation from specs/001-data-engineer-portfolio/quickstart.md and record findings in specs/001-data-engineer-portfolio/validation.md
-- [ ] T051 Review dependency list for constitution compliance and remove or justify any unplanned dependency in package.json and specs/001-data-engineer-portfolio/validation.md
-- [ ] T052 Final content review to ensure exactly four MVP projects, project-first visual hierarchy, no broken links, no broken images, and no backend/auth/database/CMS/contact-form implementation in src/data/projects.ts, src/pages/Home.tsx, and src/pages/ProjectDetails.tsx
+- [ ] T051 Review dependency list for constitution compliance, confirm no unnecessary runtime dependencies were introduced, and remove or justify any unplanned dependency in package.json and specs/001-data-engineer-portfolio/validation.md
+- [ ] T052 Final content review to ensure exactly four MVP projects, project screenshots and diagrams are optimized before deployment, project cards are visually more prominent than decorative elements, manual review confirms engineering projects are emphasized over decorative content, no broken links, no broken images, and no backend/auth/database/CMS/contact-form implementation in src/data/projects.ts, src/pages/Home.tsx, and src/pages/ProjectDetails.tsx; record validation results in specs/001-data-engineer-portfolio/validation.md
 
 ---
 
@@ -191,7 +191,7 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 Task: "Add data validation tests for four required project categories, unique project IDs, repository rules, and required detail sections in src/data/projects.test.ts"
 Task: "Add project card rendering tests for title, description, technologies, detail link, and repository/unavailable state in src/components/projects/ProjectCard.test.tsx"
 Task: "Add project detail route tests for known projects and unknown project fallback in src/pages/ProjectDetails.test.tsx"
-Task: "Add home Projects section integration test confirming project prominence and four cards in src/pages/Home.projects.test.tsx"
+Task: "Add home Projects section integration test confirming the visible \"View Projects\" primary CTA, direct primary navigation link to Projects, Projects-before-Contact section order, and four project cards in src/pages/Home.projects.test.tsx"
 ```
 
 ---
