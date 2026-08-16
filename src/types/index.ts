@@ -7,6 +7,8 @@ export interface Profile {
   email: string;
   githubUrl: string;
   linkedinUrl: string;
+  calUrl: string;
+  image?: ProjectVisual;
 }
 
 export interface ContactMethod {
@@ -20,6 +22,28 @@ export interface SkillCategory {
   id: string;
   name: string;
   skills: string[];
+}
+
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  organization: string;  period: string;
+  summary: string;
+  highlights: string[];
+}
+
+export interface EducationItem {
+  id: string;
+  degree: string;
+  institution: string;
+  period?: string;
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  year: string;
 }
 
 export interface ProjectVisual {

@@ -3,22 +3,27 @@ import type { SkillCategory } from '../types';
 export const skillCategories: SkillCategory[] = [
   {
     id: 'data-platforms',
-    name: 'Data Platforms',
-    skills: ['Python', 'SQL', 'Spark', 'dbt', 'Airflow', 'Databricks']
+    name: 'Data Platforms & Storage',
+    skills: ['Databricks', 'Delta Lake', 'Airflow']
+  },
+  {
+    id: 'Programming Languages',
+    name: 'Programming Languages',
+    skills: ['Python','Spark']
   },
   {
     id: 'cloud-infrastructure',
     name: 'Cloud & Infrastructure',
-    skills: ['AWS', 'Azure', 'Docker', 'CI/CD', 'GitHub Actions', 'Linux']
+    skills: ['Azure', 'AWS', 'Docker', 'CI/CD', 'Linux']
   },
   {
-    id: 'analytics-ml',
-    name: 'Analytics & ML',
-    skills: ['Feature Engineering', 'Model Evaluation', 'Time Series', 'scikit-learn', 'Pandas']
+    id: 'Databases',
+    name: 'Databases',
+    skills: ['SQL', 'CosmosDB']
   },
   {
-    id: 'engineering-practices',
-    name: 'Engineering Practices',
-    skills: ['TypeScript', 'Testing', 'Data Quality', 'Observability', 'Documentation']
+    id: 'Data Engineering',
+    name: 'Data Engineering',
+    skills: ['ETL/ELT', 'Data Modeling', 'Batch processing', 'Star schema']
   }
 ];
