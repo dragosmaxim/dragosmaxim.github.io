@@ -71,20 +71,20 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 
 > **NOTE: Write these tests FIRST and ensure they fail before implementation.**
 
-- [ ] T023 [P] [US1] Add data validation tests for four required project categories, unique project IDs, repository rules, and required detail sections in src/data/projects.test.ts
-- [ ] T024 [P] [US1] Add project card rendering tests for title, description, technologies, detail link, and repository/unavailable state in src/components/projects/ProjectCard.test.tsx
-- [ ] T025 [P] [US1] Add project detail route tests for known projects and unknown project fallback in src/pages/ProjectDetails.test.tsx
-- [ ] T026 [P] [US1] Add home Projects section integration test confirming the visible "View Projects" primary CTA, direct primary navigation link to Projects, Projects-before-Contact section order, and four project cards in src/pages/Home.projects.test.tsx
+- [X] T023 [P] [US1] Add data validation tests for four required project categories, unique project IDs, repository rules, and required detail sections in src/data/projects.test.ts
+- [X] T024 [P] [US1] Add project card rendering tests for title, description, technologies, detail link, and repository/unavailable state in src/components/projects/ProjectCard.test.tsx
+- [X] T025 [P] [US1] Add project detail route tests for known projects and unknown project fallback in src/pages/ProjectDetails.test.tsx
+- [X] T026 [P] [US1] Add home Projects section integration test confirming the visible "View Projects" primary CTA, direct primary navigation link to Projects, Projects-before-Contact section order, and four project cards in src/pages/Home.projects.test.tsx
 
 ### Implementation for User Story 1
 
-- [ ] T027 [P] [US1] Implement ProjectCard with project title, concise description, technology tags, detail link, and repository/unavailable state in src/components/projects/ProjectCard.tsx
-- [ ] T028 [P] [US1] Implement ProjectGrid to render typed project cards without hardcoded project content in src/components/projects/ProjectGrid.tsx
-- [ ] T029 [US1] Implement Projects section composition using ProjectGrid and centralized projects data in src/pages/Home.tsx
-- [ ] T030 [US1] Implement ProjectDetails page resolving projectId, rendering all required narrative sections, visuals when available, repository state, and back navigation in src/pages/ProjectDetails.tsx
-- [ ] T031 [US1] Implement unknown project not-found UI with a link back to the Projects section in src/pages/ProjectDetails.tsx
-- [ ] T032 [US1] Add optional project asset placeholders or documented asset paths without broken image rendering in src/assets/projects/README.md
-- [ ] T033 [US1] Wire project card links and detail routes through React Router using `/projects/:projectId` in src/App.tsx
+- [X] T027 [P] [US1] Implement ProjectCard with project title, concise description, technology tags, detail link, and repository/unavailable state in src/components/projects/ProjectCard.tsx
+- [X] T028 [P] [US1] Implement ProjectGrid to render typed project cards without hardcoded project content in src/components/projects/ProjectGrid.tsx
+- [X] T029 [US1] Implement Projects section composition using ProjectGrid and centralized projects data in src/pages/Home.tsx
+- [X] T030 [US1] Implement ProjectDetails page resolving projectId, rendering all required narrative sections, visuals when available, repository state, and back navigation in src/pages/ProjectDetails.tsx
+- [X] T031 [US1] Implement unknown project not-found UI with a link back to the Projects section in src/pages/ProjectDetails.tsx
+- [X] T032 [US1] Add optional project asset placeholders or documented asset paths without broken image rendering in src/assets/projects/README.md
+- [X] T033 [US1] Wire project card links and detail routes through React Router using `/projects/:projectId` in src/App.tsx
 
 **Checkpoint**: User Story 1 is independently functional and validates the MVP project showcase.
 
