@@ -23,13 +23,13 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 
 **Purpose**: Initialize the frontend-only Vite React project, tooling, and baseline repository files.
 
-- [ ] T001 Create npm package manifest with React, React DOM, React Router, Vite, TypeScript, Tailwind CSS, Lucide React, Vitest, Testing Library, ESLint, and build/test scripts in package.json
-- [ ] T002 Create strict TypeScript app configuration in tsconfig.json and Vite-specific TypeScript configuration in tsconfig.node.json
-- [ ] T003 Create Vite configuration with GitHub Pages-compatible base constant and Vitest jsdom setup in vite.config.ts
-- [ ] T004 [P] Create Tailwind and PostCSS configuration files in tailwind.config.js and postcss.config.js
-- [ ] T005 [P] Create ESLint configuration for React and TypeScript in eslint.config.js
-- [ ] T006 Create root HTML entry point with portfolio metadata and dark-theme defaults in index.html
-- [ ] T007 Create source directory structure for assets, components, data, pages, types, tests, and styles in src/
+- [X] T001 Create npm package manifest with React, React DOM, React Router, Vite, TypeScript, Tailwind CSS, Lucide React, Vitest, Testing Library, ESLint, and build/test scripts in package.json
+- [X] T002 Create strict TypeScript app configuration in tsconfig.json and Vite-specific TypeScript configuration in tsconfig.node.json
+- [X] T003 Create Vite configuration with GitHub Pages-compatible base constant and Vitest jsdom setup in vite.config.ts
+- [X] T004 [P] Create Tailwind and PostCSS configuration files in tailwind.config.js and postcss.config.js
+- [X] T005 [P] Create ESLint configuration for React and TypeScript in eslint.config.js
+- [X] T006 Create root HTML entry point with portfolio metadata and dark-theme defaults in index.html
+- [X] T007 Create source directory structure for assets, components, data, pages, types, tests, and styles in src/
 
 **Checkpoint**: Project can install dependencies and has the expected source layout.
 
@@ -41,21 +41,21 @@ description: "Task list for Data Engineer Portfolio MVP implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T008 Define ProjectCategory, Profile, SkillCategory, ProjectVisual, ProjectDetails, Project, and ContactMethod types in src/types/index.ts
-- [ ] T009 Create centralized profile and contact data with typed exports in src/data/profile.ts
-- [ ] T010 Create centralized skill category data with typed exports in src/data/skills.ts
-- [ ] T011 Create centralized four-project MVP data with one data-engineering, one ai, one ml, and one emg-signals project in src/data/projects.ts
-- [ ] T012 Create project data validation helpers for unique IDs, required category coverage, repository URL rules, and required detail sections in src/data/validation.ts
-- [ ] T013 Create global Tailwind stylesheet with dark theme tokens, base typography, focus styles, and responsive defaults in src/index.css
-- [ ] T014 Create React application entry point with BrowserRouter basename support in src/main.tsx
-- [ ] T015 Create shared application route composition for `/`, `/projects/:projectId`, and unknown route fallback in src/App.tsx
-- [ ] T016 [P] Create reusable Section layout component with semantic section landmarks in src/components/layout/Section.tsx
-- [ ] T017 [P] Create reusable Footer component with contact/profile links in src/components/layout/Footer.tsx
-- [ ] T018 [P] Create reusable Button link primitive with internal/external variants in src/components/ui/Button.tsx
-- [ ] T019 [P] Create reusable Tag primitive for technologies and skills in src/components/ui/Tag.tsx
-- [ ] T020 Create GitHub Pages SPA fallback preserving requested path, query, and hash in public/404.html
-- [ ] T021 Create GitHub Actions workflow to install dependencies, run build validation, and deploy dist/ to Pages in .github/workflows/deploy.yml
-- [ ] T022 Create base behavior test setup file for React Testing Library and jsdom matchers in src/tests/setup.ts
+- [X] T008 Define ProjectCategory, Profile, SkillCategory, ProjectVisual, ProjectDetails, Project, and ContactMethod types in src/types/index.ts
+- [X] T009 Create centralized profile and contact data with typed exports in src/data/profile.ts
+- [X] T010 Create centralized skill category data with typed exports in src/data/skills.ts
+- [X] T011 Create centralized four-project MVP data with one data-engineering, one ai, one ml, and one emg-signals project in src/data/projects.ts
+- [X] T012 Create project data validation helpers for unique IDs, required category coverage, repository URL rules, and required detail sections in src/data/validation.ts
+- [X] T013 Create global Tailwind stylesheet with dark theme tokens, base typography, focus styles, and responsive defaults in src/index.css
+- [X] T014 Create React application entry point with BrowserRouter basename support in src/main.tsx
+- [X] T015 Create shared application route composition for `/`, `/projects/:projectId`, and unknown route fallback in src/App.tsx
+- [X] T016 [P] Create reusable Section layout component with semantic section landmarks in src/components/layout/Section.tsx
+- [X] T017 [P] Create reusable Footer component with contact/profile links in src/components/layout/Footer.tsx
+- [X] T018 [P] Create reusable Button link primitive with internal/external variants in src/components/ui/Button.tsx
+- [X] T019 [P] Create reusable Tag primitive for technologies and skills in src/components/ui/Tag.tsx
+- [X] T020 Create GitHub Pages SPA fallback preserving requested path, query, and hash in public/404.html
+- [X] T021 Create GitHub Actions workflow to install dependencies, run build validation, and deploy dist/ to Pages in .github/workflows/deploy.yml
+- [X] T022 Create base behavior test setup file for React Testing Library and jsdom matchers in src/tests/setup.ts
 
 **Checkpoint**: Shared app infrastructure, content data, routing, styling, and deployment skeleton are ready.
 

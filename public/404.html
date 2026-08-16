@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var pathSegmentsToKeep = 1;
+        var locationPath = window.location.pathname;
+        var basePath = locationPath
+          .split('/')
+          .slice(0, 1 + pathSegmentsToKeep)
+          .join('/');
+        var routePath = locationPath
+          .split('/')
+          .slice(1 + pathSegmentsToKeep)
+          .join('/');
+        var redirectUrl =
+          window.location.origin +
+          basePath +
+          '/?/' +
+          routePath +
+          window.location.search +
+          window.location.hash;
+
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting to the portfolio…
+  </body>
+</html>
