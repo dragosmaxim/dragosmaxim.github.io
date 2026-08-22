@@ -15,6 +15,10 @@ const isDark = computed(() => colorMode.value === 'dark');
 function toggleColorMode() {
   colorMode.preference = isDark.value ? 'light' : 'dark';
 }
+
+function restartHomeAnimation() {
+  window.dispatchEvent(new CustomEvent('restart-home-animation'));
+}
 </script>
 
 <template>
@@ -29,6 +33,7 @@ function toggleColorMode() {
             to="/#home"
             class="inline-flex min-h-7 shrink-0 items-center rounded-full px-2 py-1 text-[0.98rem] font-black tracking-tight text-foreground transition duration-200 hover:bg-accent hover:text-accent-foreground"
             aria-label="Go to Dragos Maxim portfolio home"
+            @click="restartHomeAnimation"
           >
             Dragos Maxim
           </NuxtLink>
@@ -38,6 +43,7 @@ function toggleColorMode() {
               :key="item.href"
               :to="item.href"
               class="inline-flex min-h-7 items-center rounded-full px-2 py-1 text-sm font-medium text-muted-foreground transition duration-200 first:text-primary hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent"
+              @click="item.href === '/#home' && restartHomeAnimation()"
             >
               {{ item.label }}
             </NuxtLink>
@@ -55,7 +61,7 @@ function toggleColorMode() {
       </nav>
     </header>
 
-    <div class="mx-auto min-h-screen w-full max-w-6xl border-x border-border pt-24 sm:pt-28">
+    <div class="mx-auto min-h-screen w-full max-w-6xl pt-24 sm:pt-28">
       <div class="px-4 sm:px-8 lg:px-12">
         <slot />
         <AppFooter />

@@ -12,6 +12,7 @@ const initials = computed(() =>
 );
 
 const showProfileImage = ref(Boolean(store.profile.image));
+const heroAnimationKey = ref(0);
 
 const getIconComponent = (kind: string) => {
   const iconMap: Record<string, any> = {
@@ -21,16 +22,29 @@ const getIconComponent = (kind: string) => {
   };
   return iconMap[kind];
 };
+
+function restartHeroAnimation() {
+  heroAnimationKey.value += 1;
+}
+
+onMounted(() => {
+  window.addEventListener('restart-home-animation', restartHeroAnimation);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('restart-home-animation', restartHeroAnimation);
+});
 </script>
 
 <template>
   <main>
     <section id="home" class="scroll-mt-28 py-16 text-center sm:py-24 lg:py-28">
-      <div class="mx-auto max-w-4xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
-          {{ store.profile.role }}
+      <div :key="heroAnimationKey" class="mx-auto max-w-4xl">
+        <p class="hero-role text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+          <span>Data Engineer</span>
+          <span>AI Engineer</span>
         </p>
-        <div class="mx-auto mt-7 grid size-52 place-items-center overflow-hidden rounded-full border-4 border-foreground bg-[#c2c9c7] shadow-2xl shadow-black/10 dark:shadow-black/30 sm:size-64">
+        <div class="hero-photo mx-auto mt-7 grid size-52 place-items-center overflow-hidden rounded-full border-4 border-foreground bg-[#c2c9c7] shadow-2xl shadow-black/10 dark:shadow-black/30 sm:size-64">
           <img
             v-if="store.profile.image && showProfileImage"
             :src="store.profile.image.src"
@@ -66,11 +80,13 @@ const getIconComponent = (kind: string) => {
 
     <LayoutSection id="about" title="About Me">
       <div class="max-w-6xl space-y-8">
-        <p class="max-w-2xl text-base leading-[1.5] text-muted-foreground sm:text-lg">
-          Proactive, results driven Data Engineer with hands-on experience in Python, databases, data modeling, Azure, and Databricks. Focused on building reliable data solutions across ingestion, transformation, and integration, with an emphasis on data quality and scalable data workflows. Also experienced in AI-enabled data fixes, including RAG pipelines, data enrichment, and LLM-based automation.
-        </p>
+        <div class="inline-block max-w-2xl rounded-2xl border border-border bg-card p-5 sm:p-6">
+          <p class="text-base leading-[1.5] text-muted-foreground sm:text-lg">
+            Proactive, results driven Data Engineer with hands-on experience in Python, databases, data modeling, Azure, and Databricks. Focused on building reliable data solutions across ingestion, transformation, and integration, with an emphasis on data quality and scalable data workflows. Also experienced in AI-enabled data fixes, including RAG pipelines, data enrichment, and LLM-based automation.
+          </p>
+        </div>
 
-        <div class="rounded-2xl border border-border bg-card/80 p-5 sm:p-6">
+        <div class="rounded-2xl border border-border bg-card p-5 sm:p-6">
           <h3 class="text-3xl font-bold tracking-tight text-card-foreground">Experience</h3>
           <div class="relative mt-4 pl-6">
             <span class="absolute bottom-0 left-0 top-0 w-1 rounded-full bg-primary" aria-hidden="true" />
@@ -87,7 +103,7 @@ const getIconComponent = (kind: string) => {
           </div>
         </div>
 
-        <div class="rounded-2xl border border-border bg-card/80 p-5 sm:p-6">
+        <div class="rounded-2xl border border-border bg-card p-5 sm:p-6">
           <h3 class="text-3xl font-bold tracking-tight text-card-foreground">Education</h3>
           <div class="relative mt-4 pl-6">
             <span class="absolute bottom-0 left-0 top-0 w-1 rounded-full bg-primary" aria-hidden="true" />

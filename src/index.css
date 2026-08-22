@@ -91,6 +91,60 @@ a {
   min-height: 100vh;
 }
 
+.hero-role {
+  position: relative;
+  display: inline-grid;
+  min-width: 15ch;
+  place-items: center;
+}
+
+.hero-role span {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transform: translateY(0.65rem);
+  animation: hero-role-cycle 4.2s ease-in-out 0.35s infinite;
+}
+
+.hero-role span:nth-child(2) {
+  animation-delay: 2.45s;
+}
+
+.hero-photo {
+  animation: hero-photo-enter 0.55s ease-out both;
+}
+
+@keyframes hero-role-cycle {
+  0%,
+  12% {
+    opacity: 0;
+    transform: translateY(0.65rem);
+  }
+
+  22%,
+  45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55%,
+  100% {
+    opacity: 0;
+    transform: translateY(-0.65rem);
+  }
+}
+
+@keyframes hero-photo-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -99,5 +153,14 @@ a {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .hero-role span {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-role span:nth-child(2) {
+    display: none;
   }
 }
