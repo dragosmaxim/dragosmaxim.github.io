@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
             v-if="store.profile.image && showProfileImage"
             :src="store.profile.image.src"
             :alt="store.profile.image.alt"
-            class="size-full object-contain"
+            class="size-full object-cover object-center"
             @error="showProfileImage = false"
           >
           <span v-else class="text-3xl font-bold text-card-foreground">{{ initials }}</span>
