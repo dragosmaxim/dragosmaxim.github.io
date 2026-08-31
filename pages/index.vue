@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
   <main>
     <section id="home" class="scroll-mt-28 py-16 text-center sm:py-24 lg:py-28">
       <div :key="heroAnimationKey" class="mx-auto max-w-4xl">
-        <p class="hero-role text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+        <p class="hero-role text-lg font-semibold uppercase tracking-[0.28em] text-foreground/90">
           <span>Data Engineer</span>
           <span>AI Engineer</span>
         </p>
