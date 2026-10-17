@@ -19,11 +19,16 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'Databases',
     name: 'Databases',
-    skills: ['SQL', 'CosmosDB']
+    skills: ['SQL', 'CosmosDB', 'PostgreSQL', 'MongoDB']
   },
   {
-    id: 'Data Engineering',
-    name: 'Data Engineering',
-    skills: ['ETL/ELT', 'Data Modeling', 'Batch processing', 'Star schema']
+    id: 'Dataframe Databases',
+    name: 'Dataframe Databases',
+    skills: ['ArcticDB']
+  },
+  {
+    id: 'AI',
+    name: 'AI',
+    skills: ['OpenAI SDK', 'Claude', 'Github Copilot', 'MS365Copilot']
   }
 ];
