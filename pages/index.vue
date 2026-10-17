@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
       <div class="max-w-6xl space-y-8">
         <div class="inline-block max-w-2xl rounded-2xl border border-border bg-card p-5 sm:p-6">
           <p class="text-base leading-[1.5] text-muted-foreground sm:text-lg">
-            Proactive, results driven Data Engineer with hands-on experience in Python, databases, data modeling, Azure, and Databricks. Focused on building reliable data solutions across ingestion, transformation, and integration, with an emphasis on data quality and scalable data workflows. Also experienced in AI-enabled data fixes, including RAG pipelines, data enrichment, and LLM-based automation.
+            Proactive, results driven Data Engineer experienced in Azure, Databricks and Python. Focused on building reliable data solutions across ingestion, transformation, and integration, with an emphasis on data quality and scalable data workflows. Also experienced in AI-enabled data fixes, including RAG pipelines, data enrichment, and LLM-based automation.
           </p>
         </div>
 
