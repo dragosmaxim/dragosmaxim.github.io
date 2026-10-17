@@ -39,7 +39,7 @@ export const contactMethods: ContactMethod[] = [
 export const experienceItems: ExperienceItem[] = [
     {
     id: 'accenture',
-    role: 'Data Engineer, Management and Governance Analyst',
+    role: 'Data Eng, Mgmt and Governance Analyst',
     organization: 'Accenture, Bucharest, Romania',
     period: 'October 2026 - Present',
     summary: 'Data Eng, Mgmt and Governance Analyst.',
